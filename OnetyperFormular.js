@@ -2,14 +2,14 @@ var OnetyperFormular = {
 }
 
 var keys = ["ID", "TITLE", "CATEGORY", "TEXT"];
-var values = ["undefined_or_text_id", "Your title", null, "Here goes more specific description"];
+var values = ["undefined_or_text_id", "Your title", "At least one category", "Here goes more specific description"];
 
 OnetyperFormular.dlzka = function(){
-    return 6;
+    return keys.length;
 }
 
 OnetyperFormular.getKey = function(position){
-    if (!position) return;
+    if (!position==undefined) return;
     if (position >this.dlzka()){
         return;        
     }
@@ -17,7 +17,7 @@ OnetyperFormular.getKey = function(position){
 }
 
 OnetyperFormular.getValue = function(position){
-    if (!position) return;
+    if (!position==undefined) return;
     if (position >this.dlzka()){
         return;        
     }

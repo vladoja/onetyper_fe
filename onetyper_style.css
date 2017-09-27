@@ -6,6 +6,11 @@ body {
     background-color: beige;
 }
 
+table {
+    margin: auto;
+    border: solid;
+}
+
 td {
     border: 1px solid black;
     width: 60px;

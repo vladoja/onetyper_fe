@@ -6,10 +6,16 @@ Draw.all = function() {
     var table = document.querySelector("table");
     for (var i=0; i<rows; i++) {
         var row = document.createElement("tr");
-        for (var j=0; j<rows; j++) {
-            var cell = document.createElement("td");
-            row.appendChild(cell);
-        }
+        
+        var cell_1 = document.createElement("td");
+        var cell_2 = document.createElement("td");
+        
+        cell_1.innerHTML = OnetyperFormular.getKey(i);
+        cell_2.innerHTML = OnetyperFormular.getValue(i);
+        
+        row.appendChild(cell_1);
+        row.appendChild(cell_2);
+        
         table.appendChild(row);
     }
     document.addEventListener("click", function(e) {
