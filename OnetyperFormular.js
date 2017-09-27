@@ -8,10 +8,22 @@ OnetyperFormular.dlzka = function(){
     return 6;
 }
 
-OnetyperFormular.get = function(position){
+OnetyperFormular.getKey = function(position){
     if (!position) return;
     if (position >this.dlzka()){
         return;        
     }
-    return [keys[position],values[position]];
+    return keys[position];
+}
+
+OnetyperFormular.getValue = function(position){
+    if (!position) return;
+    if (position >this.dlzka()){
+        return;        
+    }
+    return values[position];
+}
+
+OnetyperFormular.get = function(position){
+    return [this.getKey(position),this.getValue(position)];
 }
